@@ -1,0 +1,23 @@
+.shopping-header h1{
+    color: var(--main);
+    font-weight: 600;
+}
+.shopping-header p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.shopping-header span{
+    color: var(--main);
+}
+
+.btn-clear{
+    background-color: #bbbaba;
+    color: var(--main);
+}
+.product-img{
+    width: 150px;
+}
+
+table td{
+    vertical-align: middle;
+}
