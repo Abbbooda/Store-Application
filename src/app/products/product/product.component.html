@@ -1,0 +1,19 @@
+<div class="card">
+    <img src="https://fakeimg.pl/600x400" class="card-img-top" alt="">
+    <div class="card-body">
+        <h5 class="card-title">{{ 'Snickers' }}</h5>
+        <p class="card-text">
+            {{ 'Description' }}
+        </p>
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+                <button *ngIf="cartButtonOn; else cartTemp" (click)="onAddCart()" class="btn btn-success">Add To Cart</button>
+                <ng-template #cartTemp>
+                    <input type="number" value="0" class="form-control w-50"/>
+                    <button class="btn btn-danger">Add</button>
+                </ng-template>
+            </div>
+            <span>{{ '109' | currency }}</span>
+        </div>
+    </div>
+</div>
