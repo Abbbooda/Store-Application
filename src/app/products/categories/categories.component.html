@@ -1,7 +1,7 @@
 <div class="row my-4">
     <div class="col-4">
         <h2>Category : </h2>
-        <select name="category" class="form-select">
+        <select name="category" (change)="onChangeSelect()" class="form-select" #categoryTemp>
             <option *ngFor="let category of categories" [value]="category">
                 {{ category }}
             </option>

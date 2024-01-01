@@ -21,3 +21,12 @@
 table td{
     vertical-align: middle;
 }
+
+table td span{
+    padding: 3px 25px;
+    background-color: #fff !important;
+    border: 1px solid #5d5d5d;
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: middle;
+}

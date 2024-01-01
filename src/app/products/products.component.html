@@ -1,9 +1,6 @@
 <div class="container">
-    <app-categories></app-categories>
+    <app-categories (onCategoryChanges)="getCategory($event)"></app-categories>
     <div class="row">
-        <div class="col-lg-3">
-            <app-product></app-product>
-        </div>
         <div class="col-lg-3">
             <app-product></app-product>
         </div>

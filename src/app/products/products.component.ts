@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
 
+  category : string
+
+  getCategory(value){
+    this.category = value
+  }
+
 }
