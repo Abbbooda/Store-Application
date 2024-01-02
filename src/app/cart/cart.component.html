@@ -4,7 +4,9 @@
             <h1>Shopping Cart</h1>
             <p>You have <span>{{ cartItems.length }}</span> item in your cart</p>
         </div>
-        <button class="btn btn-clear" (click)="onClearCart()">Clear Shopping Cart</button>
+        <button class="btn btn-clear" (click)="onClearCart()">
+            Clear Shopping Cart
+        </button>
     </div>
     <table class="table text-center table-striped" *ngIf="cartItems.length">
         <tr>
