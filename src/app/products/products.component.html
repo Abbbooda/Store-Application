@@ -1,5 +1,10 @@
 <div class="container">
     <app-categories (onCategoryChanges)="getCategory($event)"></app-categories>
+    <div *ngIf="loadSpinnerMode" class="row spinner-box">
+        <div class="col-3 mx-auto mt-5">
+            <span class="loader"></span>
+        </div>
+    </div>
     <div class="row">
         <div *ngFor="let product of products" class="col-lg-3">
             <app-product [product]="product"></app-product>

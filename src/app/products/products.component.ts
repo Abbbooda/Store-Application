@@ -15,11 +15,13 @@ export class ProductsComponent implements OnInit {
 
   category : string
   products : Product[]
+  loadSpinnerMode : boolean = true
 
   onFetchProducts(){
     this.productService
     .getAllProducts().subscribe((data)=>{
       this.products = data
+      this.loadSpinnerMode = false
     })
   }
 
@@ -31,13 +33,16 @@ export class ProductsComponent implements OnInit {
 
   getCategory(value : any){
     this.category = value
+    this.products = []
     this.fetchProductsById(this.category)
+    this.loadSpinnerMode = true
   }
 
   fetchProductsById(cate : string){
     this.productService.getProductsByCategory(cate).
     subscribe((prods)=>{
       this.products = prods
+      this.loadSpinnerMode = false
     })
   }
 
