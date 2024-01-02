@@ -38,10 +38,7 @@ export class CartService{
         })
         .reduce((prev,curr)=>{
             return prev + curr
-        },0)
-
-        
-        
+        },0) 
     }
 
 }

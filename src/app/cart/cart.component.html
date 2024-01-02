@@ -6,7 +6,7 @@
         </div>
         <button class="btn btn-clear" (click)="onClearCart()">Clear Shopping Cart</button>
     </div>
-    <table class="table text-center table-striped">
+    <table class="table text-center table-striped" *ngIf="cartItems.length">
         <tr>
             <th>Name</th>
             <th>Price</th>
@@ -16,7 +16,7 @@
         </tr>
         <tbody>
             <tr *ngFor="let cart of cartItems">
-                <td>
+                <td style="width: 50%">
                     <img [src]="cart.image" class="product-img" alt="">
                     {{ cart.title }}
                 </td>

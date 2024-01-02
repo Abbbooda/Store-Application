@@ -13,7 +13,13 @@
 .btn-clear{
     background-color: #bbbaba;
     color: var(--main);
+    transition: .2s ease;
 }
+.btn-clear:hover{
+    background-color: var(--main);
+    color: #fff;
+}
+
 .product-img{
     width: 150px;
 }

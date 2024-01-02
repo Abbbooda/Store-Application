@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from 'src/app/Models/product';
 import { CartService } from 'src/app/Services/cart.service';
+import { ProductService } from 'src/app/Services/product.service';
 
 @Component({
   selector: 'app-product',
@@ -13,33 +14,27 @@ export class ProductComponent {
 
   }
 
+  @Input() product : Product
+
   cartButtonOn : boolean = true
 
-  product : Product = {
-    id: 1,
-    title : 'Snickers',
-    price : 120,
-    description : 'product description',
-    category : 'mens',
-    image : 'https://fakeimg.pl/600x400'
-  }
-
-  quantity : number
-  
+  quantity : number = 0
 
   onAddCart(){
     this.cartButtonOn = false
   }
 
-  onAddToCart(){
+ 
+  onAddToCart(product : Product){
     this.cartService.AddToCart({
-      id : this.product.id,
-      title : this.product.title,
-      price : this.product.price,
-      description : this.product.description,
-      category : this.product.category,
-      image : this.product.image,
+      id : product.id,
+      title : product.title,
+      price : product.price,
+      description : product.description,
+      category : product.category,
+      image : product.image,
       quantity : this.quantity
+
     })
     this.cartButtonOn = true
   }

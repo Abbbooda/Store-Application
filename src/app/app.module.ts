@@ -9,6 +9,9 @@ import { CartComponent } from './cart/cart.component';
 import { CategoriesComponent } from './products/categories/categories.component';
 import { ProductComponent } from './products/product/product.component';
 import { FormsModule } from '@angular/forms';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ProductDetailsComponent } from './products/product-details/product-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { FormsModule } from '@angular/forms';
     ProductsComponent,
     CartComponent,
     CategoriesComponent,
-    ProductComponent
+    ProductComponent,
+    NotFoundComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

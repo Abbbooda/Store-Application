@@ -2,6 +2,7 @@
     <div class="col-4">
         <h2>Category : </h2>
         <select name="category" (change)="onChangeSelect()" class="form-select" #categoryTemp>
+           <option value="">All</option>
             <option *ngFor="let category of categories" [value]="category">
                 {{ category }}
             </option>

@@ -14,3 +14,8 @@
 body{
     font-family: 'Inria Sans', sans-serif !important;
 }
+ 
+a{
+    text-decoration: none ! important;
+    color: black !important;
+}

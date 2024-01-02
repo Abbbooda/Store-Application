@@ -1,0 +1,15 @@
+<div class="row mt-4">
+    <div class="col-4">
+        <img [src]="product.image" alt="" class="w-100">
+    </div>
+    <div class="col-7">
+        <div class="details">
+            <p><strong>Title :</strong> {{ product.title }}</p>
+            <p><strong>Category :</strong> {{ product.category }}</p>
+            <p><strong>Description :</strong> {{ product.description }}</p>
+            <p><strong>Rate :</strong> {{ product.rating.rate }}</p>
+            <p><strong>Count :</strong> {{ product.rating.count }}</p>
+            <p><strong>Price :</strong> {{ product.price }}</p>
+        </div>
+    </div>
+</div>

@@ -27,6 +27,9 @@ export class CartComponent implements OnInit{
   }
 
   removeQuantity(cartItem : CartItem){
+    if(cartItem.quantity === 1){
+      this.deleteItem(cartItem)
+    }
     cartItem.quantity = cartItem.quantity - 1
   }
 
